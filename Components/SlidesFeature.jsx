@@ -41,12 +41,12 @@ export const SlidesFeature = () => {
         <div className={styles.slidesWrapper} style={{transform: `translateX(${-100*index}vw)`}}>
              {listSlides.map((slide, index) => 
                 (   
-                    <div className={styles.imgWrapper}>
+                    <div className={styles.imgWrapper} key={slide.title}>
                         <div className={styles.info}>
                             <h2>{slide.title}</h2>
                             <subtitle>{slide.subtitle}</subtitle>
                         </div>
-                        <Image src={slide.img} alt="" className={styles.img} key={index} />
+                        <Image src={slide.img} alt={slide.title} className={styles.img} key={index} />
                     </div>
                 ))}
         </div>

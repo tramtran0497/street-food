@@ -1,0 +1,134 @@
+.container{
+    margin-top: 130px;
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title{
+    width: 90%;
+}
+
+.title h2{
+    font-size: 60px;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.title p{
+    font-size: 20px;
+    text-align: center;
+
+}
+
+.listProducts{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.listFoods{
+    width: 100%;
+    height: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 80px;
+    border-bottom: 2px solid aquamarine;
+}
+
+.foodWrapper:before{
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-color: black;
+    opacity: 0.5;
+    position: absolute;
+    z-index: 1;
+}
+
+.foodWrapper{
+    width: 40%;
+    height: 290px;
+    margin: 15px 30px;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.foodInfo{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.foodInfo h3{
+    width: 70%;
+    color: white;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.foodIcons{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.icons{
+    color: white;
+    font-size: 30px;
+    margin: 0 10px; 
+    cursor: pointer;
+    transition: all .25s ease-in;
+}
+
+.icons:hover{
+    color: aquamarine;
+}
+
+.listDrinks{
+    width: 100%;
+    height: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.drinkWrapper:before{
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-color: black;
+    opacity: 0.3;
+    position: absolute;
+    z-index: 1;
+}
+
+.drinkWrapper{
+    width: 40%;
+    height: 620px;
+    margin: 15px 30px;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+}
