@@ -1,0 +1,79 @@
+
+.container{
+    height: 200px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    
+}
+
+.left{
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.contactIcons{
+    width: 8%;
+    font-size: 30px;
+    margin: 5px;
+    background-color:aquamarine;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.phoneNum{
+    width: 80%;
+    padding-left: 20px ;
+    font-size: 18px;
+}
+
+.center{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.list{
+    list-style: none;
+}
+
+.listItem{
+    width: fit-content;
+    margin: 5px 0;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: all .25s ease;
+}
+
+.listItem:hover{
+    background-color: aquamarine;
+}
+
+.right{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.listIcons{
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.icons{
+    font-size: 25px;
+    margin: 20px 10px;
+    cursor: pointer;
+}

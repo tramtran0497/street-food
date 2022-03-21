@@ -1,0 +1,71 @@
+
+.container{
+    width: 100vw;
+    height: 100px;
+    background-color: aquamarine;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    position: fixed;
+    top: 0px;
+    z-index: 2;
+}
+
+.left{
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.center{
+    width: 60%;
+}
+
+.list{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.listItem{
+    width: fit-content;
+    font-size: 20px;
+    padding-bottom: 3px;
+    cursor: pointer;
+    border: none;
+    transition-delay: 0.15s;
+}
+
+.listItem:hover{
+    border-bottom: 2px solid black;
+}
+
+.right{
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.icons{
+    font-size: 30px;
+    margin: 0 5px;
+}
+
+.qtyCart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: white;
+    border-radius: 50%;
+}
