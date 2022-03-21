@@ -1,7 +1,7 @@
 .container{
     margin-top: 130px;
     width: 100%;
-    height: 100vh;
+    height: 260vh;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -126,7 +126,7 @@
 
 .drinkWrapper{
     width: 40%;
-    height: 620px;
+    height: 590px;
     margin: 15px 30px;
     position: relative;
     border-radius: 15px;

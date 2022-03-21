@@ -1,15 +1,21 @@
 import styles from "../styles/Footer.module.css"
 import {IoLogoLinkedin, IoLogoGithub, IoLogoWhatsapp, IoLogoFacebook} from "react-icons/io5"
-import { BiPhoneCall, BiNotepad, BiDonateHeart, BiCycling } from "react-icons/bi";
+import { BiPhoneCall, BiNotepad, BiDonateHeart, BiCycling, BiMap} from "react-icons/bi";
 
 export const Footer = () => {
     return(
         <div className={styles.container}>
             <div className={styles.left}>
-                <BiPhoneCall className={styles.contactIcons}/><span className={styles.phoneNum}>+358 412 345 678</span>
-                <BiNotepad className={styles.contactIcons}/><span className={styles.phoneNum}>+358 412 345 678</span>
-                <BiDonateHeart className={styles.contactIcons}/><span className={styles.phoneNum}>+358 412 345 678</span>
-                <BiCycling className={styles.contactIcons}/><span className={styles.phoneNum}>+358 412 345 678</span>
+               <div className={styles.openTime}>
+                    <h2>Opening Hours</h2>
+                    <p>Mon-Thu: 10:00 - 21:00</p>
+                    <p>Fri, Sat: 11:00 - 22:00</p>
+                    <p>Sun: 12:00 - 20:00</p>
+               </div>
+               <div className={styles.listStores}>
+                    <h4><BiMap style={{"fontSize": "25px", "margin": "0 10px 0 0"}}/>Tee Tea - Lahti</h4>
+                    <p>Mariankatu 6, 15110 Lahti Finland</p>
+               </div>
             </div>
             <div className={styles.center}>
                 <ul className={styles.list}>
@@ -28,6 +34,12 @@ export const Footer = () => {
                 </ul>
             </div>
             <div className={styles.right}>
+                <div className={styles.contact}>
+                    <BiPhoneCall className={styles.contactIcons}/><span className={styles.phoneNum}>+358 412 345 678</span>
+                    <BiNotepad className={styles.contactIcons}/><span className={styles.phoneNum}>+358 412 345 678</span>
+                    <BiDonateHeart className={styles.contactIcons}/><span className={styles.phoneNum}>+358 412 345 678</span>
+                    <BiCycling className={styles.contactIcons}/><span className={styles.phoneNum}>+358 412 345 678</span>
+                </div>
                 <div className={styles.listIcons}>
                     <IoLogoLinkedin className={styles.icons}/>
                     <IoLogoGithub className={styles.icons}/>
