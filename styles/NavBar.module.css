@@ -55,6 +55,7 @@
 .icons{
     font-size: 30px;
     margin: 0 5px;
+    cursor: pointer;
 }
 
 .qtyCart{
