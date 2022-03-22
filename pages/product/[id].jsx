@@ -49,7 +49,7 @@ export default function Product () {
                     product.listAddIngredient.map(igr => (
                         <div className={styles.extraIgr}>
                             <input type="checkbox" id={igr} name={igr} value={igr} />
-                            <label for={igr}>{igr}</label>
+                            <label htmlFor={igr}>{igr}</label>
                         </div>
                     ))
                 }
