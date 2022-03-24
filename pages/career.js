@@ -1,8 +1,8 @@
 import styles from "../styles/Career.module.css"
-import Image from 'next/image';
 import career1 from "../public/img/career-1.avif"
 import career2 from "../public/img/career-2.avif"
 import career3 from "../public/img/career-3.avif"
+import { JobCard } from "../Components/JobCard"
 
 const recruitList = [
     {
@@ -47,23 +47,7 @@ export default function contact () {
             <div className={styles.wrapper}>
                 <h1>WE ARE HIRING...</h1>
                 <div className={styles.cards}>
-                    {
-                        recruitList.map(position => (
-                            <div className={styles.card} key={position.jobName}>
-                                <div className={styles.imgWrapper}>
-                                    <Image src={position.img}/>
-                                </div>
-                                <h2>{position.jobName}</h2>
-                                <ul>
-                                    {position.reqs.map((req,index) =>(
-                                        <li key={index}>{req}</li>
-                                    ))}
-                                </ul>
-                                
-                                <p>We need: {position.qty} member(s)</p>
-                            </div>
-                        ))
-                    }
+                    {recruitList.map(position => <JobCard position={position}/>)}
                 </div>
             </div>
             <div className={styles.formApplyJob}>

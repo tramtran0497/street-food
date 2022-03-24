@@ -1,16 +1,16 @@
 .container:before{
     content: "";
     width: 100%;
-    height: calc(150vh - 100px);
+    height: calc(160vh - 100px);
     position: absolute;
     z-index: 1;
     background-color: black;
-    opacity: 0.7;
+    opacity: 0.85;
 }
 
 .container{
     margin-top: 100px;
-    height: calc(150vh - 100px);
+    height: calc(160vh - 100px);
     background-image: url("https://images.unsplash.com/photo-1500898335608-a4b6696f81a5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
     display: flex;
     flex-direction: column;
@@ -43,10 +43,9 @@
 
 .card{
     width: 30%;
-    height: 60vh;
+    height: 75vh;
     background-color: white;
     border-radius: 10px;
-    overflow: scroll;
 }
 
 .imgWrapper{
