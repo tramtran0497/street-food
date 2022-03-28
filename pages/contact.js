@@ -1,8 +1,15 @@
 import styles from "../styles/Contact.module.css"
+import Head from 'next/head'
 
 export default function contact () {
   return (
     <div className={styles.container}>
+      <Head>
+        <title>TeeTea</title>
+        <meta name="description" content="Best Street Food in Lahti" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
       <h1 className={styles.title}>Customer Service</h1>
       <subtitle className={styles.subTil}>(We warmly welcome feedback from customers, they are strong power to develop us)</subtitle>
       <div className={styles.wrapper}>

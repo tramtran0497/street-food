@@ -4,6 +4,7 @@ import drink1 from "../../public/img/drink-1.avif"
 import Image from "next/image"
 import { RiDoubleQuotesL, RiDoubleQuotesR, RiAddLine, RiSubtractLine } from "react-icons/ri";
 import { BsCupStraw } from "react-icons/bs";
+import Head from 'next/head'
 
 const demoFood = {
     id:"1F",
@@ -28,6 +29,11 @@ const product = demoDrink;
 export default function Product () {
   return (
     <div className={styles.container}>
+        <Head>
+            <title>TeeTea</title>
+            <meta name="description" content="Best Street Food in Lahti" />
+            <link rel="icon" href="/favicon.ico" />
+        </Head>
         <div className={styles.imgWrapper}>
             <Image src={product.img} alt={product.name} className={styles.img}/>
         </div>

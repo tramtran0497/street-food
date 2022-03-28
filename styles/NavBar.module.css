@@ -17,11 +17,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
 }
 
 .center{
-    width: 60%;
+    width: 40%;
 }
 
 .list{
@@ -52,9 +51,13 @@
     justify-content: flex-end;
 }
 
+.left h1{
+    cursor: pointer;
+}
+
 .icons{
-    font-size: 30px;
-    margin: 0 5px;
+    font-size: 25px;
+    margin: 0 15px;
     cursor: pointer;
 }
 
@@ -65,8 +68,8 @@
     width: 25px;
     height: 25px;
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 22px;
+    right: 88px;
     background-color: white;
     border-radius: 50%;
 }

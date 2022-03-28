@@ -1,6 +1,7 @@
 import styles from "../styles/Footer.module.css"
 import {IoLogoLinkedin, IoLogoGithub, IoLogoWhatsapp, IoLogoFacebook} from "react-icons/io5"
 import { BiPhoneCall, BiNotepad, BiDonateHeart, BiCycling, BiMap} from "react-icons/bi";
+import Link from 'next/link'
 
 export const Footer = () => {
     return(
@@ -19,18 +20,30 @@ export const Footer = () => {
             </div>
             <div className={styles.center}>
                 <ul className={styles.list}>
-                    <li className={styles.listItem}>Menu</li>
-                    <li className={styles.listItem}>Products</li>
-                    <li className={styles.listItem}>Career</li>
-                    <li className={styles.listItem}>Event</li>
-                    <li className={styles.listItem}>Home</li>
+                    <Link href="/menu">
+                        <li className={styles.listItem}>Menu</li>       
+                    </Link>
+                    <Link href="/career">
+                        <li className={styles.listItem}>Career</li>
+                    </Link>
+                    <Link href="/event">
+                        <li className={styles.listItem}>Event</li>      
+                    </Link>
+                    <Link href="/">
+                        <li className={styles.listItem}>Home</li>      
+                    </Link>
+                    <Link href="/contact">
+                        <li className={styles.listItem}>Customer Service</li>      
+                    </Link>
                 </ul>
                 <ul className={styles.list}>
-                    <li className={styles.listItem}>Order</li>
-                    <li className={styles.listItem}>Delivery</li>
+                    <Link href="/event">
+                        <li className={styles.listItem}>News</li>       
+                    </Link>
+                    <li className={styles.listItem}>Order Policy</li>
+                    <li className={styles.listItem}>Delivery Policy</li>
                     <li className={styles.listItem}>Book Table</li>
                     <li className={styles.listItem}>Check Out</li>
-                    <li className={styles.listItem}>Customer Service</li>
                 </ul>
             </div>
             <div className={styles.right}>
@@ -41,8 +54,12 @@ export const Footer = () => {
                     <BiCycling className={styles.contactIcons}/><span className={styles.phoneNum}>+358 412 345 678</span>
                 </div>
                 <div className={styles.listIcons}>
-                    <IoLogoLinkedin className={styles.icons}/>
-                    <IoLogoGithub className={styles.icons}/>
+                    <Link href="https://www.linkedin.com/in/tram-tran-924301207/" >
+                        <IoLogoLinkedin className={styles.icons}/>
+                    </Link>
+                    <Link href="https://github.com/tramtran0497">
+                        <IoLogoGithub className={styles.icons}/>
+                    </Link>
                     <IoLogoWhatsapp className={styles.icons}/>
                     <IoLogoFacebook className={styles.icons}/>
                 </div>

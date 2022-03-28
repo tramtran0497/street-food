@@ -1,53 +1,8 @@
 import styles from "../styles/ListBestProducts.module.css"
-import food1 from "../public/img/product-1.avif"
-import food2 from "../public/img/product-2.avif"
-import food3 from "../public/img/product-3.avif"
-import food4 from "../public/img/product-4.avif"
-import drink1 from "../public/img/drink-1.avif"
-import drink2 from "../public/img/drink-2.avif"
-import drink3 from "../public/img/drink-3.avif"
-import drink4 from "../public/img/drink-4.avif"
 import Image from "next/image"
-import { IoHeartCircle, IoCart, IoEyeSharp } from "react-icons/io5";
-
-
-const listFoods = [
-    {
-        name: "Cheese Tokbokki",
-        img: food1,
-    },
-    {
-        name: "Ramen",
-        img: food2,
-    },
-    {
-        name: "Pork Dumpling",
-        img: food3,
-    },
-    {
-        name: "Crispy Chicken",
-        img: food4,
-    },
-]
-
-const listDrinks = [
-    {
-        name: "Brown Sugar Bubble Milk Tea",
-        img: drink1,
-    },
-    {
-        name: "Berries Smoothy",
-        img: drink2,
-    },
-    {
-        name: "Chocolate Ice Blend",
-        img: drink3,
-    },
-    {
-        name: "Mint Orange",
-        img: drink4,
-    },
-]
+import {IoCart, IoEyeSharp } from "react-icons/io5";
+import {listFoods, listDrinks} from "../fakeData/MenuData.js"
+import Link from 'next/link'
 
 export const ListBestProducts = () => {
   return (
@@ -70,8 +25,13 @@ export const ListBestProducts = () => {
                                 <h3>{food.name}</h3>
                                 <div className={styles.foodIcons}>
                                     <IoCart className={styles.icons}/>
-                                    <IoEyeSharp className={styles.icons}/>
-                                    <IoHeartCircle className={styles.icons}/>
+                                    <Link  href={{
+                                        pathname: '/product/[id]',
+                                        query: { id: `${food.name}` }
+                                      }}>
+                                        <IoEyeSharp className={styles.icons}/>
+                                    </Link>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -88,7 +48,6 @@ export const ListBestProducts = () => {
                                 <div className={styles.foodIcons}>
                                     <IoCart className={styles.icons}/>
                                     <IoEyeSharp className={styles.icons}/>
-                                    <IoHeartCircle className={styles.icons}/>
                                 </div>
                             </div>
                         </div>

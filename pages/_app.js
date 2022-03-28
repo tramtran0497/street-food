@@ -1,11 +1,16 @@
 import { Layout } from '../Components/Layout'
 import '../styles/globals.css'
+import {ThemeProvider} from "../ReactHooks/ThemeContext"
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <ThemeProvider>
+      <div>
+          <Layout>
+            <Component {...pageProps}/>
+          </Layout>
+      </div>
+    </ThemeProvider> 
   )
 }
 
