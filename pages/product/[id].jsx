@@ -5,6 +5,7 @@ import Image from "next/image"
 import { RiDoubleQuotesL, RiDoubleQuotesR, RiAddLine, RiSubtractLine } from "react-icons/ri";
 import { BsCupStraw } from "react-icons/bs";
 import Head from 'next/head'
+import { ChangeQty } from "../../Components/ChangeQty";
 
 const demoFood = {
     id:"1F",
@@ -64,11 +65,7 @@ export default function Product () {
             </form>
             <div className={styles.qtyWrapper}>
                 <label className={styles.title}>How many?</label>
-                <div className={styles.qty}>
-                    <RiSubtractLine className={styles.icons}/>
-                    <p>3</p>
-                    <RiAddLine className={styles.icons}/>
-                </div>
+                <ChangeQty/>
             </div>
             <button className={styles.btn}>Add Cart</button>
         </div>

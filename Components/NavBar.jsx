@@ -44,7 +44,9 @@ export const NavBar = () => {
                     darkTheme ? <RiMoonLine className={styles.icons} onClick={toggleTheme}/> : <RiSunLine className={styles.icons} onClick={toggleTheme}/>
                 }
                 <div>
-                    <RiShoppingCart2Line className={styles.icons}/>
+                    <Link href="/cart">
+                        <RiShoppingCart2Line className={styles.icons}/>
+                    </Link>
                     <div className={styles.qtyCart}>3</div>
                 </div>
                 <RiUserSettingsLine className={styles.icons}/>
