@@ -1,8 +1,6 @@
 import styles from "../styles/ListBestProducts.module.css"
-import Image from "next/image"
-import {IoCart, IoEyeSharp } from "react-icons/io5";
 import {listFoods, listDrinks} from "../fakeData/MenuData.js"
-import Link from 'next/link'
+import { BestProduct } from "./BestProduct"
 
 export const ListBestProducts = () => {
   return (
@@ -18,40 +16,12 @@ export const ListBestProducts = () => {
         <div className={styles.listProducts}>
             <div className={styles.listFoods}>   
                 {
-                    listFoods.map(food => (
-                        <div className={styles.foodWrapper}>
-                            <Image src={food.img} className={styles.img} alt={food.name}/>
-                            <div className={styles.foodInfo}>
-                                <h3>{food.name}</h3>
-                                <div className={styles.foodIcons}>
-                                    <IoCart className={styles.icons}/>
-                                    <Link  href={{
-                                        pathname: '/product/[id]',
-                                        query: { id: `${food.name}` }
-                                      }}>
-                                        <IoEyeSharp className={styles.icons}/>
-                                    </Link>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    ))
+                    listFoods.map(food =>  <BestProduct product={food}/>)
                 }
             </div>
             <div className={styles.listDrinks}>
                 {
-                    listDrinks.map(drink => (
-                        <div className={styles.drinkWrapper}>
-                            <Image src={drink.img} className={styles.img} alt={drink.name}/>
-                            <div className={styles.foodInfo}>
-                                <h3>{drink.name}</h3>
-                                <div className={styles.foodIcons}>
-                                    <IoCart className={styles.icons}/>
-                                    <IoEyeSharp className={styles.icons}/>
-                                </div>
-                            </div>
-                        </div>
-                    ))
+                    listDrinks.map(drink => <BestProduct product={drink}/>)
                 }
             </div>
         </div>

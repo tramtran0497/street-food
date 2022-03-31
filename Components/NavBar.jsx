@@ -4,13 +4,18 @@ import Link from 'next/link'
 import { RiUserSettingsLine,  RiShoppingCart2Line, RiSunLine, RiMoonLine} from "react-icons/ri";
 import { useContext, useState, useEffect } from "react";
 import { ThemeContext, ThemeUpdateContext } from "../ReactHooks/ThemeContext";
-
+import { useSelector } from "react-redux";
 
 export const NavBar = () => {
     const darkTheme = useContext(ThemeContext)
     const toggleTheme = useContext(ThemeUpdateContext)
+
+    const {listCarts} = useSelector((state) => state.cart)
+    const initialValue = 0
+    const totalQty = listCarts.map(cart => cart.qty).reduce((pre, current) => pre + current, initialValue)
+
     useEffect(() => {
-        console.log("nav",darkTheme)
+        // console.log("nav",darkTheme)
     })
     return(
         <div className={styles.container}>
@@ -47,7 +52,7 @@ export const NavBar = () => {
                     <Link href="/cart">
                         <RiShoppingCart2Line className={styles.icons}/>
                     </Link>
-                    <div className={styles.qtyCart}>3</div>
+                    <div className={styles.qtyCart}>{totalQty}</div>
                 </div>
                 <RiUserSettingsLine className={styles.icons}/>
                

@@ -6,6 +6,8 @@ import { RiDoubleQuotesL, RiDoubleQuotesR, RiAddLine, RiSubtractLine } from "rea
 import { BsCupStraw } from "react-icons/bs";
 import Head from 'next/head'
 import { ChangeQty } from "../../Components/ChangeQty";
+import { useSelector } from "react-redux";
+import { useEffect } from "react";
 
 const demoFood = {
     id:"1F",
@@ -28,6 +30,15 @@ const demoDrink = {
 
 const product = demoDrink;
 export default function Product () {
+    const {listCarts} = useSelector(state => state.cart)
+    const qty = listCarts.map(cart => {
+        if(cart.id === product.id){
+            return  cart.qty
+        }
+    })
+    useEffect(() => {
+        console.log("qty nha", qty)
+    })
   return (
     <div className={styles.container}>
         <Head>
@@ -65,7 +76,7 @@ export default function Product () {
             </form>
             <div className={styles.qtyWrapper}>
                 <label className={styles.title}>How many?</label>
-                <ChangeQty/>
+                <ChangeQty product={product} qty={qty}/>
             </div>
             <button className={styles.btn}>Add Cart</button>
         </div>

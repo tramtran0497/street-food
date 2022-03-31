@@ -24,24 +24,25 @@ const demoDrink = {
 }
 
 export default function cart(){
+  const product = demoDrink
   return (
     <div className={styles.container}>
       <h1>YOUR ORDER - OUR HAPPINESS</h1>
       <div className={styles.listOrderedItems}>
         <div className={styles.orderedItem}>
           <div className={styles.left}>
-            <Image src={demoDrink.img}/>
+            <Image src={product.img}/>
           </div>
           <div className={styles.right}>
             <div className={styles.title}>
-              <h2>{demoDrink.name}</h2>
-              <subtitle>(Product code: {demoDrink.id})</subtitle>
+              <h2>{product.name}</h2>
+              <subtitle>(Product code: {product.id})</subtitle>
             </div>
             <div className={styles.info}>
               <div className={styles.infoWrapper}>
                 <h4 style={{"width": "100%"}}>Add:</h4>
                 {
-                  demoDrink.listAddIngredient.map(igr => (
+                  product.listAddIngredient.map(igr => (
                       <div className={styles.extraIgr}>
                           <label htmlFor={igr}>{igr}</label>
                       </div>
@@ -54,11 +55,11 @@ export default function cart(){
               </div>
               <div className={styles.infoWrapper}>
                   <h4>Quantity:</h4>
-                  <ChangeQty/>
+                  <ChangeQty product={product}/>
               </div>
               <div className={styles.infoWrapper}>
                   <h4>Price:</h4>
-                  <p>€ {demoDrink.price[0]}</p>
+                  <p>€ {product.price[0]}</p>
               </div>
               <FaTrashAlt className={styles.trashIcon}/>
             </div>
@@ -68,18 +69,18 @@ export default function cart(){
 
         <div className={styles.orderedItem}>
         <div className={styles.left}>
-          <Image src={demoDrink.img}/>
+          <Image src={product.img}/>
         </div>
         <div className={styles.right}>
           <div className={styles.title}>
-            <h2>{demoDrink.name}</h2>
-            <subtitle>(Product code: {demoDrink.id})</subtitle>
+            <h2>{product.name}</h2>
+            <subtitle>(Product code: {product.id})</subtitle>
           </div>
           <div className={styles.info}>
             <div className={styles.infoWrapper}>
               <h4 style={{"width": "100%"}}>Add:</h4>
               {
-                demoDrink.listAddIngredient.map(igr => (
+                product.listAddIngredient.map(igr => (
                     <div className={styles.extraIgr}>
                         <label htmlFor={igr}>{igr}</label>
                     </div>
@@ -92,11 +93,11 @@ export default function cart(){
             </div>
             <div className={styles.infoWrapper}>
                 <h4>Quantity:</h4>
-                <ChangeQty/>
+                <ChangeQty product={product}/>
             </div>
             <div className={styles.infoWrapper}>
                 <h4>Price:</h4>
-                <p>€ {demoDrink.price[0]}</p>
+                <p>€ {product.price[0]}</p>
             </div>
             <FaTrashAlt className={styles.trashIcon}/>
           </div>
