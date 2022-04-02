@@ -1,6 +1,6 @@
-import styles from "../styles/ListBestProducts.module.css"
-import {listFoods, listDrinks} from "../fakeData/MenuData.js"
-import { BestProduct } from "./BestProduct"
+import styles from "../styles/ListBestProducts.module.css";
+import {listFoods, listDrinks} from "../fakeData/MenuData.js";
+import { BestProduct } from "./BestProduct";
 
 export const ListBestProducts = () => {
   return (

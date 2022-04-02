@@ -31,19 +31,17 @@
     flex-direction: column;
 }
 
-.listFoods{
+.listDrinks, .listFoods{
     width: 100%;
-    height: 700px;
+    height: max-content;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+.listFoods{
     margin-bottom: 80px;
     border-bottom: 2px solid aquamarine;
 }
 
-.listDrinks{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
+

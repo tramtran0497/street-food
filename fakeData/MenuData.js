@@ -1,30 +1,30 @@
-import ld1A from "../public/img/menu-ld-1A.avif"
-import ld1B from "../public/img/menu-ld-1B.avif"
-import ld2A from "../public/img/menu-ld-2A.avif"
-import ld2B from "../public/img/menu-ld-2B.avif"
-import ld3 from "../public/img/menu-ld-3AB.avif"
-import ld4A from "../public/img/menu-ld-4A.avif"
-import ld4B from "../public/img/menu-ld-4B.avif"
-import ld5A from "../public/img/menu-ld-5A.avif"
-import ld5B from "../public/img/menu-ld-5B.avif"
+import ld1A from "../public/img/menu-ld-1A.avif";
+import ld1B from "../public/img/menu-ld-1B.avif";
+import ld2A from "../public/img/menu-ld-2A.avif";
+import ld2B from "../public/img/menu-ld-2B.avif";
+import ld3 from "../public/img/menu-ld-3AB.avif";
+import ld4A from "../public/img/menu-ld-4A.avif";
+import ld4B from "../public/img/menu-ld-4B.avif";
+import ld5A from "../public/img/menu-ld-5A.avif";
+import ld5B from "../public/img/menu-ld-5B.avif";
 
-import food1 from "../public/img/product-1.avif"
-import food2 from "../public/img/product-2.avif"
-import food3 from "../public/img/product-3.avif"
-import food4 from "../public/img/product-4.avif"
-import drink1 from "../public/img/drink-1.avif"
-import drink2 from "../public/img/drink-2.avif"
-import drink3 from "../public/img/drink-3.avif"
-import drink4 from "../public/img/drink-4.avif"
+import food1 from "../public/img/product-1.avif";
+import food2 from "../public/img/product-2.avif";
+import food3 from "../public/img/product-3.avif";
+import food4 from "../public/img/product-4.avif";
+import drink1 from "../public/img/drink-1.avif";
+import drink2 from "../public/img/drink-2.avif";
+import drink3 from "../public/img/drink-3.avif";
+import drink4 from "../public/img/drink-4.avif";
 
-import career1 from "../public/img/career-1.avif"
-import career2 from "../public/img/career-2.avif"
-import career3 from "../public/img/career-3.avif"
+import career1 from "../public/img/career-1.avif";
+import career2 from "../public/img/career-2.avif";
+import career3 from "../public/img/career-3.avif";
 
-import event1 from "../public/img/event-1.avif"
-import event2 from "../public/img/event-2.avif"
-import event3 from "../public/img/event-3.avif"
-import event4 from "../public/img/event-4.avif"
+import event1 from "../public/img/event-1.avif";
+import event2 from "../public/img/event-2.avif";
+import event3 from "../public/img/event-3.avif";
+import event4 from "../public/img/event-4.avif";
 
 export const listFoods = [
     {
@@ -35,7 +35,7 @@ export const listFoods = [
         price: 10.9,
         img: food1,
     },
-    { 
+    {
         id: "F2",
         name: "Ramen",
         listAddIngredient: ['Egg', 'Seaweed', 'Ramen', 'BokChoi'],
@@ -236,12 +236,12 @@ export const mainMenu = [
         size: [],
     },
 ]
-    
+
 export const drinkMenu = [
     {
         id: "DM1",
-        name:"Mixed Full Topping Milk Tea",
-        ingredients:"Chocolate pudding, Flan, Bubble, Cheese jelly, Milk tea",
+        name: "Mixed Full Topping Milk Tea",
+        ingredients: "Chocolate pudding, Flan, Bubble, Cheese jelly, Milk tea",
         extraInfo: "You can change level of sweet.",
         listAddIngredient: ['Bubble', 'Cheese Foam', 'Jelly', 'Flan', 'Pudding'],
         size: ["Small", "Medium", "Large"],
@@ -249,7 +249,7 @@ export const drinkMenu = [
     },
     {
         id: "DM2",
-        name:"Fruit Smoothy",
+        name: "Fruit Smoothy",
         ingredients: "Fruits: Strawberry, Coconut with Cacao Powder, Avocado",
         listAddIngredient: ['Bubble', 'Cheese Foam', 'Jelly', 'Flan', 'Pudding'],
         size: ["Small", "Medium", "Large"],
@@ -258,7 +258,7 @@ export const drinkMenu = [
     },
     {
         id: "DM3",
-        name:"Fruit Juice",
+        name: "Fruit Juice",
         ingredients: "Fruits: Orange, Pearl, Watermelon, Pineapple, Apple",
         listAddIngredient: ['Bubble', 'Cheese Foam', 'Jelly', 'Flan', 'Pudding'],
         size: ["Small", "Medium", "Large"],
@@ -267,8 +267,8 @@ export const drinkMenu = [
     },
     {
         id: "DM4",
-        name:"Original Milk Tea",
-        ingredients:"Bubble and Milk tea, Cheese foam",
+        name: "Original Milk Tea",
+        ingredients: "Bubble and Milk tea, Cheese foam",
         listAddIngredient: ['Bubble', 'Cheese Foam', 'Jelly', 'Flan', 'Pudding'],
         size: ["Small", "Medium", "Large"],
         extraInfo: "You can change level of sweet.",
@@ -276,8 +276,8 @@ export const drinkMenu = [
     },
     {
         id: "DM5",
-        name:"Soju Wine/ Rice Wine",
-        ingredients:"",
+        name: "Soju Wine/ Rice Wine",
+        ingredients: "",
         extraInfo: "Soju and Rice wine: 300ml",
         listAddIngredient: [],
         size: [],
@@ -285,8 +285,8 @@ export const drinkMenu = [
     },
     {
         id: "DM6",
-        name:"Tamanohikari Shuraku Junmai Ginjo Sake",
-        ingredients:"",
+        name: "Tamanohikari Shuraku Junmai Ginjo Sake",
+        ingredients: "",
         listAddIngredient: [],
         size: [],
         extraInfo: "Sake: 300ml",
@@ -297,60 +297,60 @@ export const drinkMenu = [
 export const snacksMenu = [
     {
         id: "S1",
-        name:"Cheese Tokbokki",
-        ingredients:"Fish cake, Tokbokki cake, Mozzarella cheese and Cheese powder, Onion and Sesame",
+        name: "Cheese Tokbokki",
+        ingredients: "Fish cake, Tokbokki cake, Mozzarella cheese and Cheese powder, Onion and Sesame",
         extraInfo: "There are 4 levels of spicy.",
         listAddIngredient: ["Tokbokki", "Cheese", "Fish Cake"],
         size: [],
-        price: 11.9, 
+        price: 11.9,
     },
     {
         id: "S2",
-        name:"Crispy Chicken and Fried Potatoes",
-        ingredients:"Chicken, Potatoes, Korean sauces, Sesame, Onion",
+        name: "Crispy Chicken and Fried Potatoes",
+        ingredients: "Chicken, Potatoes, Korean sauces, Sesame, Onion",
         listAddIngredient: ["Fried Potatoes", "Mozzarella Stick", "Chilli Bites"],
         size: [],
         extraInfo: "There are 4 levels of spicy.",
-        price: 11.9, 
+        price: 11.9,
     },
     {
         id: "S3",
-        name:"Dumpling and Tao Bao",
-        ingredients:"Flour, Pork, Mushroom, Carrot, Onion, Garlic, Soy sauces and vinegar, Ginger",
+        name: "Dumpling and Tao Bao",
+        ingredients: "Flour, Pork, Mushroom, Carrot, Onion, Garlic, Soy sauces and vinegar, Ginger",
         listAddIngredient: ["Cabbage", "Kimchi", "Sald and Cucumber"],
         size: [],
         extraInfo: "Hong Kong styles",
-        price: 10.9, 
+        price: 10.9,
     },
     {
         id: "S4",
-        name:"Doraemon and Fish Cake",
-        ingredients:"Red bean, flour, Sugar, Milk",
+        name: "Doraemon and Fish Cake",
+        ingredients: "Red bean, flour, Sugar, Milk",
         extraInfo: "With 1 big size of TeaTee glass.",
         listAddIngredient: ["Mungbean", "Milk", "Cheese"],
         size: [],
-        price: 10.9, 
+        price: 10.9,
     },
     {
         id: "S5",
-        name:"Goi Cuon",
-        ingredients:"Shrimp, Pork, Salad, Cucumber, Rice noddles, Rice paper, Vegetables",
+        name: "Goi Cuon",
+        ingredients: "Shrimp, Pork, Salad, Cucumber, Rice noddles, Rice paper, Vegetables",
         extraInfo: "There are 4 rolls with Vietnamese sauces from peanuts.",
         listAddIngredient: ["Mungbean", "Salad", "Eggs", "Pork Ear"],
         size: [],
-        price: 11.9, 
+        price: 11.9,
     },
     {
         id: "S6",
-        name:"Bot Chien",
-        ingredients:"Flour, Papaya, Eggs, Onion, Soy sauces, Chilli",
+        name: "Bot Chien",
+        ingredients: "Flour, Papaya, Eggs, Onion, Soy sauces, Chilli",
         extraInfo: "There are 4 levels of spicy.",
         listAddIngredient: ["Eggs", "Bot Chien"],
         size: [],
-        price: 10.9, 
+        price: 10.9,
     },
 ]
-    
+
 
 export const recruitList = [
     {
@@ -416,6 +416,6 @@ export const eventList = [
         eventName: "Become Our Friendly Customer",
         img: event4,
         firstWord: "It is time for you to become our friendly customer, let's join with us! Creating a new member card in a second!",
-        des:"Many many many big gifts for new members, why not be our customers? If you are a freshmen, your first order has 10% discount with best sellers foods and drinks and the next order gets 20% discount if you bring another new member to TeeTea restaurant. Besides, we always update new events everyday, weekly and monthly, every moment. Please do not miss them! they are the gifts of TeeTea to our customers, Thank you! "
+        des: "Many many many big gifts for new members, why not be our customers? If you are a freshmen, your first order has 10% discount with best sellers foods and drinks and the next order gets 20% discount if you bring another new member to TeeTea restaurant. Besides, we always update new events everyday, weekly and monthly, every moment. Please do not miss them! they are the gifts of TeeTea to our customers, Thank you! "
     },
 ]
