@@ -21,7 +21,7 @@ export const ListBestProducts = () => {
             </div>
             <div className={styles.listDrinks}>
                 {
-                    listDrinks.map(drink => <BestProduct product={drink}/>)
+                    listDrinks.map(drink => <BestProduct product={drink} height="600px"/>)
                 }
             </div>
         </div>

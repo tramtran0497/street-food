@@ -1,4 +1,4 @@
-import {ADD_TO_CART, REMOVE_FROM_CART} from "./types"
+import {ADD_TO_CART, REMOVE_FROM_CART} from "./types";
 
 const INITIAL_STATE = {
     listCarts: [],
@@ -7,8 +7,7 @@ const INITIAL_STATE = {
 const cartReducer = (state = INITIAL_STATE, action) => {
     const existInCart = state.listCarts?.find(
         (item) => item.id === action.payload?.id
-    )
-    console.log("Action", action)
+    );
     switch(action.type) {
         case ADD_TO_CART:
             if(existInCart){
@@ -18,8 +17,8 @@ const cartReducer = (state = INITIAL_STATE, action) => {
                     state.listCarts.map((item) =>
                         item.id === action.payload.id ? {...item, qty: item.qty + 1} : item
                     )
-                }
-                return newState
+                };
+                return newState;
             } else{
                 const newState = {
                     ...state,
@@ -30,11 +29,36 @@ const cartReducer = (state = INITIAL_STATE, action) => {
                             qty: 1,
                         }
                     ]
-                }
-                return newState
+                };
+                return newState;
             }
+        
+        case REMOVE_FROM_CART:
+            if(existInCart){
+                const qtyItem = existInCart.qty;
+                console.log("check qty", qtyItem)
+                if(qtyItem > 1){
+                    const newState = {
+                        ...state,
+                        listCarts: 
+                        state.listCarts.map((item) =>
+                            item.id === action.payload.id ? {...item, qty: item.qty - 1} : item
+                        )
+                    };
+                } else{
+                    const indexOfItem = state.listCarts.indexOf(existInCart);
+                    state.listCarts.splice(indexOfItem, 1);
+                    const newState = {
+                        ...state,
+                        listCarts: [...state.listCarts],
+                    }
+                    return newState;
+                }
+            }
+            return state;
+        default:
+            return state;
     }
+};
 
-    return state
-}
 export default cartReducer;
