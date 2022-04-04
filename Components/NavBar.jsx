@@ -5,58 +5,65 @@ import { RiUserSettingsLine,  RiShoppingCart2Line, RiSunLine, RiMoonLine} from "
 import { useContext, useState, useEffect } from "react";
 import { ThemeContext, ThemeUpdateContext } from "../ReactHooks/ThemeContext";
 import { useSelector } from "react-redux";
+import { NavBarUser } from "./NavBarUser";
 
 export const NavBar = () => {
-    const darkTheme = useContext(ThemeContext)
-    const toggleTheme = useContext(ThemeUpdateContext)
+    const [isShowed, setIsShow] = useState(false);
+    const darkTheme = useContext(ThemeContext);
+    const toggleTheme = useContext(ThemeUpdateContext);
 
-    const {listCarts} = useSelector((state) => state.cart)
-    const initialValue = 0
+    const {listCarts} = useSelector((state) => state.cart);
+    const initialValue = 0;
     const totalQty = listCarts.map(cart => cart.qty).reduce((pre, current) => pre + current, initialValue)
 
+    const handleShow = () => {
+        setIsShow(!isShowed);
+    }
+
     useEffect(() => {
-        // console.log("nav",darkTheme)
-    })
+    });
+
     return(
         <div className={styles.container}>
             <div className={styles.left}>
-                <IoFastFoodOutline className={styles.icons}/> 
+                <IoFastFoodOutline className={styles.icon}/> 
                 <Link href="/">
                     <h1>TeeTea</h1>
                 </Link>
             </div>
             <div className={styles.center}>
-                <ul className={styles.list}>
+                <ul className={styles.listItems}>
                     <Link href="/">
-                        <li className={styles.listItem}>Home</li>
+                        <li className={styles.item}>Home</li>
                     </Link>
                     <Link href="/menu">
-                        <li className={styles.listItem}>Menu</li>
+                        <li className={styles.item}>Menu</li>
                     </Link>
                     <Link href="/event">
-                        <li className={styles.listItem}>Event</li>
+                        <li className={styles.item}>Event</li>
                     </Link>
                     <Link href="/career">
-                        <li className={styles.listItem}>Career</li>
+                        <li className={styles.item}>Career</li>
                     </Link>
                     <Link href="/contact">
-                        <li className={styles.listItem}>Contact</li>
+                        <li className={styles.item}>Contact</li>
                     </Link>
                 </ul>
             </div>
             <div className={styles.right}>
                 {
-                    darkTheme ? <RiMoonLine className={styles.icons} onClick={toggleTheme}/> : <RiSunLine className={styles.icons} onClick={toggleTheme}/>
+                    darkTheme ? <RiMoonLine className={styles.icon} onClick={toggleTheme}/> : <RiSunLine className={styles.icon} onClick={toggleTheme}/>
                 }
                 <div>
                     <Link href="/cart">
-                        <RiShoppingCart2Line className={styles.icons}/>
+                        <RiShoppingCart2Line className={styles.icon}/>
                     </Link>
-                    <div className={styles.qtyCart}>{totalQty}</div>
+                    {
+                        (totalQty > 0) ? <div className={styles.qtyCart}>{totalQty}</div> : ""
+                    }
                 </div>
-                <RiUserSettingsLine className={styles.icons}/>
-               
-
+                <RiUserSettingsLine className={styles.icon} onClick={handleShow}/>
+                <NavBarUser style={isShowed ? "0%" : "100%"}/>
             </div>
         </div>
     )
