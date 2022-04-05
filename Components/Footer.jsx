@@ -46,6 +46,12 @@ export const Footer = () => {
                     <Link href="/cart">
                         <li className={styles.listItem}>Check Out</li>
                     </Link>
+                    <Link href="/login">
+                        <li className={styles.listItem}>Sign In</li>
+                    </Link>
+                    <Link href="/register">
+                        <li className={styles.listItem}>Sign Up</li>
+                    </Link>
                 </ul>
             </div>
             <div className={styles.right}>
