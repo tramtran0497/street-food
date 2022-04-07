@@ -40,7 +40,6 @@ export const Footer = () => {
                     <Link href="/event">
                         <li className={styles.listItem}>News</li>       
                     </Link>
-                    <li className={styles.listItem}>Order Policy</li>
                     <li className={styles.listItem}>Delivery Policy</li>
                     <li className={styles.listItem}>Book Table</li>
                     <Link href="/cart">

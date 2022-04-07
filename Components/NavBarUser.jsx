@@ -31,18 +31,22 @@ export const NavBarUser = ({style}) => {
                     
                 </div>
                 <div className={styles.center}>
-                    <div className={styles.navItem}>
-                        <IoFastFoodOutline className={styles.icon}/>
-                        <p>My order</p>
-                    </div>
+                    <Link href="/orders">
+                        <div className={styles.navItem}>
+                            <IoFastFoodOutline className={styles.icon}/>
+                            <p>My order</p>
+                        </div>
+                    </Link>
                     <div className={styles.navItem}>
                         <IoGiftOutline className={styles.icon}/>
                         <p>Discount and Gifts</p>
                     </div>
-                    <div className={styles.navItem}>
-                        <IoRestaurantOutline className={styles.icon}/>
-                        <p>My history orders</p>
-                    </div>
+                    <Link href="/orders">
+                        <div className={styles.navItem}>
+                            <IoRestaurantOutline className={styles.icon}/>
+                            <p>My history orders</p>
+                        </div>
+                    </Link>
                     <div className={styles.navItem}>
                         <IoSettingsOutline className={styles.icon}/>
                         <p>Setting</p>
