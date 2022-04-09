@@ -32,7 +32,7 @@ export const listFoods = [
         name: "Cheese Tokbokki",
         listAddIngredient: ['Cheese Rice Cake', 'Fish Cake', 'Sausages', 'Ramen'],
         size: [],
-        price: 10.9,
+        price: [10.9],
         img: food1,
     },
     {
@@ -40,7 +40,7 @@ export const listFoods = [
         name: "Ramen",
         listAddIngredient: ['Egg', 'Seaweed', 'Ramen', 'BokChoi'],
         size: [],
-        price: 10.9,
+        price: [10.9],
         img: food2,
     },
     {
@@ -48,7 +48,7 @@ export const listFoods = [
         name: "Pork Dumpling",
         listAddIngredient: [],
         size: [],
-        price: 10.9,
+        price: [10.9],
         img: food3,
     },
     {
@@ -56,7 +56,7 @@ export const listFoods = [
         name: "Crispy Chicken",
         listAddIngredient: ['Salad Cucumber with Sessame Oil', 'Kim chi', 'Sausages', 'Ramen', 'Cheese'],
         size: [],
-        price: 10.9,
+        price: [10.9],
         img: food4,
     },
 ]
@@ -103,7 +103,7 @@ export const lunchDinnerMenu = [
         name: "Korean Mixed Rice",
         listAddIngredient: [],
         size: [],
-        price: 10.9,
+        price: [10.9],
         img: ld1A,
     },
     {
@@ -112,7 +112,7 @@ export const lunchDinnerMenu = [
         name: "Korean Crispy Chicken",
         listAddIngredient: [],
         size: [],
-        price: 12.9,
+        price: [12.9],
         img: ld1B,
     },
     {
@@ -121,7 +121,7 @@ export const lunchDinnerMenu = [
         listAddIngredient: [],
         size: [],
         name: "Mushroom Udon",
-        price: 10.9,
+        price: [10.9],
         img: ld2A,
     },
     {
@@ -130,7 +130,7 @@ export const lunchDinnerMenu = [
         name: "Teriyaki Ramen",
         listAddIngredient: [],
         size: [],
-        price: 11.5,
+        price: [11.5],
         img: ld2B,
     },
     {
@@ -139,14 +139,14 @@ export const lunchDinnerMenu = [
         name: "Sushi's Buffet Day",
         listAddIngredient: [],
         size: [],
-        price: 12.9,
+        price: [12.9],
         img: ld3,
     },
     {
         id: "LD6",
         day: "Thursday - Lunch",
         name: "Pork Rib Sweet Sour",
-        price: 10.9,
+        price: [10.9],
         listAddIngredient: [],
         size: [],
         img: ld4A,
@@ -155,7 +155,7 @@ export const lunchDinnerMenu = [
         id: "LD7",
         day: "Thursday - Dinner",
         name: "Beijing Duck Rice",
-        price: 11.9,
+        price: [11.9],
         listAddIngredient: [],
         size: [],
         img: ld4B,
@@ -166,7 +166,7 @@ export const lunchDinnerMenu = [
         name: "Bun Thit Nuong",
         listAddIngredient: [],
         size: [],
-        price: 10.9,
+        price: [10.9],
         img: ld5A,
     },
     {
@@ -175,7 +175,7 @@ export const lunchDinnerMenu = [
         name: "South Family Meal Style",
         listAddIngredient: [],
         size: [],
-        price: 12.9,
+        price: [12.9],
         img: ld5B,
     },
 ]
@@ -184,7 +184,7 @@ export const mainMenu = [
     {
         id: "M1",
         name: "Kim Chi Hot Pot",
-        price: 24.9,
+        price: [24.9],
         ingredients: "Pork slices, Kimchi, Mushrooms, Cabbage, Tofu",
         extraInfo: "For 2-3 people",
         listAddIngredient: ["Pork slices", "Kimchi", "Vegetables", "Tofu", "Garlic"],
@@ -193,7 +193,7 @@ export const mainMenu = [
     {
         id: "M2",
         name: "Goi Chao Ga",
-        price: 22.9,
+        price: [22.9],
         ingredients: "Chicken, Rice, Cabbage, Carrot, Chilli, Onion, Mushrooms, Peanut",
         extraInfo: "For 2 people",
         listAddIngredient: ["Shrip Cakes", "Rice Soup", "Dried Onion"],
@@ -202,7 +202,7 @@ export const mainMenu = [
     {
         id: "M3",
         name: "Beijing Duck with Dumpling",
-        price: 24.5,
+        price: [24.5],
         ingredients: "Grilled Duck, Dumpling, Salad and Cucumber",
         extraInfo: "For 2 people",
         listAddIngredient: ["Bao Bao", "Kimchi", "Banh mi"],
@@ -211,7 +211,7 @@ export const mainMenu = [
     {
         id: "M4",
         name: "Seafood Sashimi",
-        price: 39.9,
+        price: [39.9],
         ingredients: "Fresh Salmon, Tuna, Squid, Shrimp, Wasabi and Ginger",
         extraInfo: "For 2-3 people",
         listAddIngredient: ["Wasabi", "Salad Seaweed", "Ginger", "Sushi Rice"],
@@ -220,7 +220,7 @@ export const mainMenu = [
     {
         id: "M5",
         name: "Sontam",
-        price: 19.9,
+        price: [19.9],
         ingredients: "Fresh Crab, Papaya, Tomatoes, Cabbage, Chilli, Fish sauces",
         extraInfo: "For 2 people",
         listAddIngredient: ["Vegetables", "Chilli Powder"],
@@ -229,7 +229,7 @@ export const mainMenu = [
     {
         id: "M6",
         name: "Grilled Korean Style",
-        price: 49.9,
+        price: [49.9],
         ingredients: "Pork slices, Beef ribs or slices, Kimchi, Salad, Korean sauces",
         extraInfo: "For 3-4 people",
         listAddIngredient: ["Pork Slices", "Salad", "Kimchi", "Beef Ribs"],
@@ -281,7 +281,7 @@ export const drinkMenu = [
         extraInfo: "Soju and Rice wine: 300ml",
         listAddIngredient: [],
         size: [],
-        price: 11.9,
+        price: [11.9],
     },
     {
         id: "DM6",
@@ -290,7 +290,7 @@ export const drinkMenu = [
         listAddIngredient: [],
         size: [],
         extraInfo: "Sake: 300ml",
-        price: 14.9,
+        price: [14.9],
     },
 ]
 
@@ -302,7 +302,7 @@ export const snacksMenu = [
         extraInfo: "There are 4 levels of spicy.",
         listAddIngredient: ["Tokbokki", "Cheese", "Fish Cake"],
         size: [],
-        price: 11.9,
+        price: [11.9],
     },
     {
         id: "S2",
@@ -311,7 +311,7 @@ export const snacksMenu = [
         listAddIngredient: ["Fried Potatoes", "Mozzarella Stick", "Chilli Bites"],
         size: [],
         extraInfo: "There are 4 levels of spicy.",
-        price: 11.9,
+        price: [11.9]
     },
     {
         id: "S3",
@@ -320,7 +320,7 @@ export const snacksMenu = [
         listAddIngredient: ["Cabbage", "Kimchi", "Sald and Cucumber"],
         size: [],
         extraInfo: "Hong Kong styles",
-        price: 10.9,
+        price: [10.9],
     },
     {
         id: "S4",
@@ -329,7 +329,7 @@ export const snacksMenu = [
         extraInfo: "With 1 big size of TeaTee glass.",
         listAddIngredient: ["Mungbean", "Milk", "Cheese"],
         size: [],
-        price: 10.9,
+        price: [10.9],
     },
     {
         id: "S5",
@@ -338,7 +338,7 @@ export const snacksMenu = [
         extraInfo: "There are 4 rolls with Vietnamese sauces from peanuts.",
         listAddIngredient: ["Mungbean", "Salad", "Eggs", "Pork Ear"],
         size: [],
-        price: 11.9,
+        price: [11.9],
     },
     {
         id: "S6",
@@ -347,7 +347,7 @@ export const snacksMenu = [
         extraInfo: "There are 4 levels of spicy.",
         listAddIngredient: ["Eggs", "Bot Chien"],
         size: [],
-        price: 10.9,
+        price: [10.9],
     },
 ]
 

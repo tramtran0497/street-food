@@ -1,5 +1,5 @@
-import styles from "../styles/Menu.module.css"
-import Link from 'next/link'
+import styles from "../styles/Menu.module.css";
+import Link from 'next/link';
 
 export const MenuList = ({id, menu, listItemsData, isShowed}) => {
   return (
@@ -22,5 +22,5 @@ export const MenuList = ({id, menu, listItemsData, isShowed}) => {
             }   
         </ul>
     </div>
-  )
-}
+  );
+};

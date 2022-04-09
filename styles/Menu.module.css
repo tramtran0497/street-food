@@ -219,6 +219,12 @@
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.itemWrapper h3:hover{
+    text-decoration: underline;
 }
 
 .itemWrapper h4{

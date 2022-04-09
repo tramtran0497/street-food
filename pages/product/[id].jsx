@@ -1,23 +1,14 @@
-import styles from "../../styles/Product.module.css"
-import product1 from "../../public/img/product-1.avif"
-import drink1 from "../../public/img/drink-1.avif"
-import Image from "next/image"
+import styles from "../../styles/Product.module.css";
+import drink1 from "../../public/img/drink-1.avif";
+import Image from "next/image";
 import { RiDoubleQuotesL, RiDoubleQuotesR, RiAddLine, RiSubtractLine } from "react-icons/ri";
 import { BsCupStraw } from "react-icons/bs";
-import Head from 'next/head'
+import Head from "next/head";
 import { ChangeQty } from "../../Components/ChangeQty";
-import { useSelector } from "react-redux";
 import { useEffect } from "react";
+import { useRouter } from "next/router";
+// import {listDrinks, listFoods} from "../../fakeData/MenuData.js";
 
-const demoFood = {
-    id:"1F",
-    name: "Cheese Tokbokki",
-    des:"Korean rice cakes, mozzarella cheese, fish cakes, sausages, ramen, Korean chili paste(gochujang), Korean chili flakes (gochugaru), soy sauce, garlic, sesame oil, green onion and sesame seeds",
-    img: product1,
-    size: [],
-    price: [10.9],
-    listAddIngredient: ['Cheese Rice Cake', 'Fish Cake', 'Sausages', 'Ramen'],
-}
 const demoDrink = {
     id:"1D",
     name: "Brown Sugar Bubble Milk Tea",
@@ -29,16 +20,14 @@ const demoDrink = {
 }
 
 const product = demoDrink;
+
 export default function Product () {
-    const {listCarts} = useSelector(state => state.cart)
-    const qty = listCarts.map(cart => {
-        if(cart.id === product.id){
-            return  cart.qty
-        }
-    })
+    const router = useRouter();
+    const {id} = router.query;
+
     useEffect(() => {
-        console.log("qty nha", qty)
-    })
+        // const product = listFoods?.find(item => item.id === id);
+    });
   return (
     <div className={styles.container}>
         <Head>
@@ -46,12 +35,13 @@ export default function Product () {
             <meta name="description" content="Best Street Food in Lahti" />
             <link rel="icon" href="/favicon.ico" />
         </Head>
+
         <div className={styles.imgWrapper}>
             <Image src={product.img} alt={product.name} className={styles.img}/>
         </div>
         <div className={styles.info}>
             <h2>{product.name}</h2>
-            <h2>€ {product.price[0]}</h2>
+            <h2>€ {product.price}</h2>
             <subtitle><RiDoubleQuotesL style={{"margin": " 0 10px"}}/>{product.des}<RiDoubleQuotesR style={{"margin": " 0 10px"}}/></subtitle>       
             <form>
                 <label className={styles.title}>Choose your favor size (only Drinks <BsCupStraw style={{"fontSize": "30px"}}/>) :</label>
@@ -64,7 +54,7 @@ export default function Product () {
 
                 <label className={styles.title}> Choose addition ingredients for your meal:</label>
                 {
-                    product.listAddIngredient.map(igr => (
+                    product?.listAddIngredient.map(igr => (
                         <div className={styles.extraIgr}>
                             <input type="checkbox" id={igr} name={igr} value={igr} />
                             <label htmlFor={igr}>{igr}</label>
@@ -76,11 +66,10 @@ export default function Product () {
             </form>
             <div className={styles.qtyWrapper}>
                 <label className={styles.title}>How many?</label>
-                <ChangeQty product={product} qty={qty}/>
+                <ChangeQty product={product}/>
             </div>
             <button className={styles.btn}>Add Cart</button>
         </div>
-            
     </div>
-  )
-}
+  );
+};

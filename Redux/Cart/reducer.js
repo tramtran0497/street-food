@@ -36,7 +36,6 @@ const cartReducer = (state = INITIAL_STATE, action) => {
         case REMOVE_FROM_CART:
             if(existInCart){
                 const qtyItem = existInCart.qty;
-                console.log("check qty", qtyItem)
                 if(qtyItem > 1){
                     const newState = {
                         ...state,
@@ -45,6 +44,7 @@ const cartReducer = (state = INITIAL_STATE, action) => {
                             item.id === action.payload.id ? {...item, qty: item.qty - 1} : item
                         )
                     };
+                    return newState;
                 } else{
                     const indexOfItem = state.listCarts.indexOf(existInCart);
                     state.listCarts.splice(indexOfItem, 1);
