@@ -35,12 +35,16 @@ import event2 from "../public/img/event-2.avif";
 import event3 from "../public/img/event-3.avif";
 import event4 from "../public/img/event-4.avif";
 
-import main1 from "../public/img/main-1.avif"
-import main2 from "../public/img/main-2.avif"
-import main3 from "../public/img/main-3.avif"
-import main4 from "../public/img/main-4.avif"
-import main5 from "../public/img/main-5.avif"
-import main6 from "../public/img/main-6.avif"
+import main1 from "../public/img/main-1.avif";
+import main2 from "../public/img/main-2.avif";
+import main3 from "../public/img/main-3.avif";
+import main4 from "../public/img/main-4.avif";
+import main5 from "../public/img/main-5.avif";
+import main6 from "../public/img/main-6.avif";
+
+import snack1 from "../public/img/snack-1.avif";
+import snack2 from "../public/img/snack-2.avif";
+import snack3 from "../public/img/snack-3.avif";
 
 
 export const listProducts = [
@@ -347,6 +351,7 @@ export const listProducts = [
         listAddIngredient: ["Tokbokki", "Cheese", "Fish Cake"],
         size: [],
         price: [11.9],
+        img: food1,
     },
     {
         id: uuidv4(),
@@ -356,7 +361,8 @@ export const listProducts = [
         listAddIngredient: ["Fried Potatoes", "Mozzarella Stick", "Chilli Bites"],
         size: [],
         extraInfo: "There are 4 levels of spicy.",
-        price: [11.9]
+        price: [11.9],
+        img: food4,
     },
     {
         id: uuidv4(),
@@ -366,365 +372,43 @@ export const listProducts = [
         listAddIngredient: ["Cabbage", "Kimchi", "Sald and Cucumber"],
         size: [],
         extraInfo: "Hong Kong styles",
-        price: [10.9],
-    },
-    {
-        id: uuidv4(),
-        name: "Doraemon and Fish Cake",
-        type: "Snack Item",
-        ingredients: "Red bean, flour, Sugar, Milk",
-        extraInfo: "With 1 big size of TeaTee glass.",
-        listAddIngredient: ["Mungbean", "Milk", "Cheese"],
-        size: [],
-        price: [10.9],
-    },
-    {
-        id: uuidv4(),
-        name: "Goi Cuon",
-        type: "Snack Item",
-        ingredients: "Shrimp, Pork, Salad, Cucumber, Rice noddles, Rice paper, Vegetables",
-        extraInfo: "There are 4 rolls with Vietnamese sauces from peanuts.",
-        listAddIngredient: ["Mungbean", "Salad", "Eggs", "Pork Ear"],
-        size: [],
-        price: [11.9],
-    },
-    {
-        id: uuidv4(),
-        name: "Bot Chien",
-        type: "Snack Item",
-        ingredients: "Flour, Papaya, Eggs, Onion, Soy sauces, Chilli",
-        extraInfo: "There are 4 levels of spicy.",
-        listAddIngredient: ["Eggs", "Bot Chien"],
-        size: [],
-        price: [10.9],
-    },
-]
-
-export const listFoods = [
-    {
-        id: uuidv4(),
-        name: "Cheese Tokbokki",
-        listAddIngredient: ['Cheese Rice Cake', 'Fish Cake', 'Sausages', 'Ramen'],
-        size: [],
-        price: [10.9],
-        img: food1,
-    },
-    {
-        id: uuidv4(),
-        name: "Ramen",
-        listAddIngredient: ['Egg', 'Seaweed', 'Ramen', 'BokChoi'],
-        size: [],
-        price: [10.9],
-        img: food2,
-    },
-    {
-        id: uuidv4(),
-        name: "Pork Dumpling",
-        listAddIngredient: [],
-        size: [],
         price: [10.9],
         img: food3,
     },
     {
         id: uuidv4(),
-        name: "Crispy Chicken",
-        listAddIngredient: ['Salad Cucumber with Sessame Oil', 'Kim chi', 'Sausages', 'Ramen', 'Cheese'],
-        size: [],
-        price: [10.9],
-        img: food4,
-    },
-]
-
-export const listDrinks = [
-    {
-        id: uuidv4(),
-        name: "Brown Sugar Bubble Milk Tea",
-        listAddIngredient: ['Bubble', 'Cheese Foam', 'Jelly', 'Flan', 'Pudding'],
-        size: ["Small", "Medium", "Large"],
-        price: [4.9, 5.8, 6.5],
-        img: drink1,
-    },
-    {
-        id: uuidv4(),
-        name: "Berries Smoothy",
-        listAddIngredient: ['Bubble', 'Cheese Foam', 'Jelly', 'Flan', 'Pudding'],
-        size: ["Small", "Medium", "Large"],
-        price: [4.9, 5.8, 6.5],
-        img: drink2,
-    },
-    {
-        id: uuidv4(),
-        name: "Chocolate Ice Blend",
-        listAddIngredient: ['Bubble', 'Cheese Foam', 'Jelly', 'Flan', 'Pudding'],
-        size: ["Small", "Medium", "Large"],
-        price: [4.9, 5.8, 6.5],
-        img: drink3,
-    },
-    {
-        id: uuidv4(),
-        name: "Mint Orange",
-        listAddIngredient: ['Bubble', 'Cheese Foam', 'Jelly', 'Flan', 'Pudding'],
-        size: ["Small", "Medium", "Large"],
-        price: [4.9, 5.8, 6.5],
-        img: drink4,
-    },
-]
-
-export const lunchDinnerMenu = [
-    {
-        id: "LD1",
-        day: "Monday - Lunch",
-        name: "Korean Mixed Rice",
-        listAddIngredient: [],
-        size: [],
-        price: [10.9],
-        img: ld1A,
-    },
-    {
-        id: "LD2",
-        day: "Monday - Dinner",
-        name: "Korean Crispy Chicken",
-        listAddIngredient: [],
-        size: [],
-        price: [12.9],
-        img: ld1B,
-    },
-    {
-        id: "LD3",
-        day: "Tuesday - Lunch",
-        listAddIngredient: [],
-        size: [],
-        name: "Mushroom Udon",
-        price: [10.9],
-        img: ld2A,
-    },
-    {
-        id: "LD4",
-        day: "Tuesday - Dinner",
-        name: "Teriyaki Ramen",
-        listAddIngredient: [],
-        size: [],
-        price: [11.5],
-        img: ld2B,
-    },
-    {
-        id: "LD5",
-        day: "Wednesday",
-        name: "Sushi's Buffet Day",
-        listAddIngredient: [],
-        size: [],
-        price: [12.9],
-        img: ld3,
-    },
-    {
-        id: "LD6",
-        day: "Thursday - Lunch",
-        name: "Pork Rib Sweet Sour",
-        price: [10.9],
-        listAddIngredient: [],
-        size: [],
-        img: ld4A,
-    },
-    {
-        id: "LD7",
-        day: "Thursday - Dinner",
-        name: "Beijing Duck Rice",
-        price: [11.9],
-        listAddIngredient: [],
-        size: [],
-        img: ld4B,
-    },
-    {
-        id: "LD8",
-        day: "Friday - Lunch",
-        name: "Bun Thit Nuong",
-        listAddIngredient: [],
-        size: [],
-        price: [10.9],
-        img: ld5A,
-    },
-    {
-        id: "LD9",
-        day: "Friday - Dinner",
-        name: "South Family Meal Style",
-        listAddIngredient: [],
-        size: [],
-        price: [12.9],
-        img: ld5B,
-    },
-]
-
-export const mainMenu = [
-    {
-        id: "M1",
-        name: "Kim Chi Hot Pot",
-        price: [24.9],
-        ingredients: "Pork slices, Kimchi, Mushrooms, Cabbage, Tofu",
-        extraInfo: "For 2-3 people",
-        listAddIngredient: ["Pork slices", "Kimchi", "Vegetables", "Tofu", "Garlic"],
-        size: [],
-    },
-    {
-        id: "M2",
-        name: "Goi Chao Ga",
-        price: [22.9],
-        ingredients: "Chicken, Rice, Cabbage, Carrot, Chilli, Onion, Mushrooms, Peanut",
-        extraInfo: "For 2 people",
-        listAddIngredient: ["Shrip Cakes", "Rice Soup", "Dried Onion"],
-        size: [],
-    },
-    {
-        id: "M3",
-        name: "Beijing Duck with Dumpling",
-        price: [24.5],
-        ingredients: "Grilled Duck, Dumpling, Salad and Cucumber",
-        extraInfo: "For 2 people",
-        listAddIngredient: ["Bao Bao", "Kimchi", "Banh mi"],
-        size: [],
-    },
-    {
-        id: "M4",
-        name: "Seafood Sashimi",
-        price: [39.9],
-        ingredients: "Fresh Salmon, Tuna, Squid, Shrimp, Wasabi and Ginger",
-        extraInfo: "For 2-3 people",
-        listAddIngredient: ["Wasabi", "Salad Seaweed", "Ginger", "Sushi Rice"],
-        size: [],
-    },
-    {
-        id: "M5",
-        name: "Sontam",
-        price: [19.9],
-        ingredients: "Fresh Crab, Papaya, Tomatoes, Cabbage, Chilli, Fish sauces",
-        extraInfo: "For 2 people",
-        listAddIngredient: ["Vegetables", "Chilli Powder"],
-        size: [],
-    },
-    {
-        id: "M6",
-        name: "Grilled Korean Style",
-        price: [49.9],
-        ingredients: "Pork slices, Beef ribs or slices, Kimchi, Salad, Korean sauces",
-        extraInfo: "For 3-4 people",
-        listAddIngredient: ["Pork Slices", "Salad", "Kimchi", "Beef Ribs"],
-        size: [],
-    },
-]
-
-export const drinkMenu = [
-    {
-        id: "DM1",
-        name: "Mixed Full Topping Milk Tea",
-        ingredients: "Chocolate pudding, Flan, Bubble, Cheese jelly, Milk tea",
-        extraInfo: "You can change level of sweet.",
-        listAddIngredient: ['Bubble', 'Cheese Foam', 'Jelly', 'Flan', 'Pudding'],
-        size: ["Small", "Medium", "Large"],
-        price: [4.9, 5.8, 6.5],
-    },
-    {
-        id: "DM2",
-        name: "Fruit Smoothy",
-        ingredients: "Fruits: Strawberry, Coconut with Cacao Powder, Avocado",
-        listAddIngredient: ['Bubble', 'Cheese Foam', 'Jelly', 'Flan', 'Pudding'],
-        size: ["Small", "Medium", "Large"],
-        extraInfo: "You can choose which one you love.",
-        price: [4.9, 5.8, 6.5],
-    },
-    {
-        id: "DM3",
-        name: "Fruit Juice",
-        ingredients: "Fruits: Orange, Pearl, Watermelon, Pineapple, Apple",
-        listAddIngredient: ['Bubble', 'Cheese Foam', 'Jelly', 'Flan', 'Pudding'],
-        size: ["Small", "Medium", "Large"],
-        extraInfo: "You can choose which one you love.",
-        price: [4.9, 5.8, 6.5],
-    },
-    {
-        id: "DM4",
-        name: "Original Milk Tea",
-        ingredients: "Bubble and Milk tea, Cheese foam",
-        listAddIngredient: ['Bubble', 'Cheese Foam', 'Jelly', 'Flan', 'Pudding'],
-        size: ["Small", "Medium", "Large"],
-        extraInfo: "You can change level of sweet.",
-        price: [4.9, 5.8, 6.5],
-    },
-    {
-        id: "DM5",
-        name: "Soju Wine/ Rice Wine",
-        ingredients: "",
-        extraInfo: "Soju and Rice wine: 300ml",
-        listAddIngredient: [],
-        size: [],
-        price: [11.9],
-    },
-    {
-        id: "DM6",
-        name: "Tamanohikari Shuraku Junmai Ginjo Sake",
-        ingredients: "",
-        listAddIngredient: [],
-        size: [],
-        extraInfo: "Sake: 300ml",
-        price: [14.9],
-    },
-]
-
-export const snacksMenu = [
-    {
-        id: "S1",
-        name: "Cheese Tokbokki",
-        ingredients: "Fish cake, Tokbokki cake, Mozzarella cheese and Cheese powder, Onion and Sesame",
-        extraInfo: "There are 4 levels of spicy.",
-        listAddIngredient: ["Tokbokki", "Cheese", "Fish Cake"],
-        size: [],
-        price: [11.9],
-    },
-    {
-        id: "S2",
-        name: "Crispy Chicken and Fried Potatoes",
-        ingredients: "Chicken, Potatoes, Korean sauces, Sesame, Onion",
-        listAddIngredient: ["Fried Potatoes", "Mozzarella Stick", "Chilli Bites"],
-        size: [],
-        extraInfo: "There are 4 levels of spicy.",
-        price: [11.9]
-    },
-    {
-        id: "S3",
-        name: "Dumpling and Tao Bao",
-        ingredients: "Flour, Pork, Mushroom, Carrot, Onion, Garlic, Soy sauces and vinegar, Ginger",
-        listAddIngredient: ["Cabbage", "Kimchi", "Sald and Cucumber"],
-        size: [],
-        extraInfo: "Hong Kong styles",
-        price: [10.9],
-    },
-    {
-        id: "S4",
         name: "Doraemon and Fish Cake",
+        type: "Snack Item",
         ingredients: "Red bean, flour, Sugar, Milk",
         extraInfo: "With 1 big size of TeaTee glass.",
         listAddIngredient: ["Mungbean", "Milk", "Cheese"],
         size: [],
         price: [10.9],
+        img: snack1,
     },
     {
-        id: "S5",
+        id: uuidv4(),
         name: "Goi Cuon",
+        type: "Snack Item",
         ingredients: "Shrimp, Pork, Salad, Cucumber, Rice noddles, Rice paper, Vegetables",
         extraInfo: "There are 4 rolls with Vietnamese sauces from peanuts.",
         listAddIngredient: ["Mungbean", "Salad", "Eggs", "Pork Ear"],
         size: [],
         price: [11.9],
+        img: snack2,
     },
     {
-        id: "S6",
-        name: "Bot Chien",
-        ingredients: "Flour, Papaya, Eggs, Onion, Soy sauces, Chilli",
-        extraInfo: "There are 4 levels of spicy.",
-        listAddIngredient: ["Eggs", "Bot Chien"],
+        id: uuidv4(),
+        name: "Cheese Pizza",
+        type: "Snack Item",
+        ingredients: "Flour, Cheese, Surumi, Onion, Bacon, Chilli",
+        extraInfo: "We also have goal cheese",
+        listAddIngredient: ["Cheese", "Bacon", "Surumi", "Vegetable"],
         size: [],
         price: [10.9],
+        img: snack3,
     },
-]
-
+];
 
 export const recruitList = [
     {
