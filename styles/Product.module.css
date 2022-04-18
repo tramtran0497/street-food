@@ -9,10 +9,11 @@
 }
 
 .imgWrapper{
+    height: 90%;
     width: 35%;
     overflow: hidden;
     margin: 0 30px;
-    border-radius: 10px;
+    display: flex;
 }
 
 .img{
@@ -62,6 +63,7 @@
 }
 
 .title{
+    width: 60%;
     font-size: 22px;
     margin: 20px 0;
 }

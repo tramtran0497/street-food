@@ -1,7 +1,7 @@
 import styles from "../../styles/Product.module.css";
 import drink1 from "../../public/img/drink-1.avif";
 import Image from "next/image";
-import { RiDoubleQuotesL, RiDoubleQuotesR, RiAddLine, RiSubtractLine } from "react-icons/ri";
+import { RiAddLine, RiSubtractLine } from "react-icons/ri";
 import { BsCupStraw } from "react-icons/bs";
 import Head from "next/head";
 import { ChangeQty } from "../../Components/ChangeQty";
@@ -9,26 +9,15 @@ import { useEffect } from "react";
 import { useRouter } from "next/router";
 import {listProducts} from "../../fakeData/MenuData.js";
 
-const demoDrink = {
-    id:"1D",
-    name: "Brown Sugar Bubble Milk Tea",
-    des:"Bubble, brown sugar, milk",
-    img: drink1,
-    size: ["Small", "Medium", "Large"],
-    price: [4.9, 5.8, 6.5],
-    listAddIngredient: ["Cheese Foam", "Bubble", "Pudding", "Flan"],
-}
-
-const product = demoDrink;
-
 export default function Product () {
     const router = useRouter();
     const {id} = router.query;
+    const product = listProducts?.find(item => item.id === id);
 
     useEffect(() => {
-        // const product = listProducts?.find(item => item.id === id);
-        console.log(listProducts)
-    });
+        // console.log(listProducts)
+        // console.log(product1)
+    }, );
   return (
     <div className={styles.container}>
         <Head>
@@ -43,7 +32,6 @@ export default function Product () {
         <div className={styles.info}>
             <h2>{product.name}</h2>
             <h2>€ {product.price}</h2>
-            <subtitle><RiDoubleQuotesL style={{"margin": " 0 10px"}}/>{product.des}<RiDoubleQuotesR style={{"margin": " 0 10px"}}/></subtitle>       
             <form>
                 <label className={styles.title}>Choose your favor size (only Drinks <BsCupStraw style={{"fontSize": "30px"}}/>) :</label>
                 <select name="size" id="size" className={styles.size}>
