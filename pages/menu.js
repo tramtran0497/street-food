@@ -1,7 +1,7 @@
 import styles from "../styles/Menu.module.css"
 import { BsFillArrowRightCircleFill, BsFillArrowLeftCircleFill } from "react-icons/bs"
 import { MenuSlidesCard } from "../Components/MenuSlidesCard"
-import { drinkMenu, lunchDinnerMenu, mainMenu, snacksMenu } from "../fakeData/MenuData"
+import { listProducts} from "../fakeData/MenuData"
 import { useState } from "react"
 import { MenuList } from "../Components/MenuList"
 import Head from 'next/head'
@@ -22,6 +22,10 @@ export default function menu() {
             setIndex(index !== 3 ? index + 1 : 0)
         }
     }
+
+    const mainList = listProducts.filter(product => product.type === "Main Item");
+    const drinkList = listProducts.filter(product => product.type === "Drink Item");
+    const snackList = listProducts.filter(product => product.type === "Snack Item");
   return (
     <div className={styles.container}>
         <Head>
@@ -48,15 +52,15 @@ export default function menu() {
                 <BsFillArrowLeftCircleFill className={styles.icon} onClick={() => handleClickMenuSlides("left")} style={{"left": "10px"}}/>
                 <div className={styles.listLDDishes} style={{transform: `translateX(${-45*index}vw)`}} id="lunchDinner">
                     {
-                        lunchDinnerMenu.map(dish => <MenuSlidesCard dish={dish} key={dish.id}/>)
+                        listProducts.map(product => product.type === "Lunch-Dinner Item" ? <MenuSlidesCard dish={product} key={product.id}/> : "")
                     }
                 </div>
                 <BsFillArrowRightCircleFill className={styles.icon} onClick={() => handleClickMenuSlides("right")} style={{"right": "10px"}}/>
             </div>
             <div className={styles.menuWrapper}>
-                <MenuList id="mainMenu" menu="MAIN DISHES..." listItemsData={mainMenu} isShowed={menuName === "main" ? true : false} />
-                <MenuList id="drinksMenu" menu="DRINKS..." listItemsData={drinkMenu} isShowed={menuName === "drinks" ? true : false}/> 
-                <MenuList id="snacksMenu" menu="SNACKS..." listItemsData={snacksMenu} isShowed={menuName === "snacks" ? true : false} />
+                <MenuList id="mainMenu" menu="MAIN DISHES..." listItemsData={mainList} isShowed={menuName === "main" ? true : false} />
+                <MenuList id="drinksMenu" menu="DRINKS..." listItemsData={drinkList} isShowed={menuName === "drinks" ? true : false}/> 
+                <MenuList id="snacksMenu" menu="SNACKS..." listItemsData={snackList} isShowed={menuName === "snacks" ? true : false} />
             </div> 
         </div>
 

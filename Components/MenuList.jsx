@@ -2,6 +2,8 @@ import styles from "../styles/Menu.module.css";
 import Link from 'next/link';
 
 export const MenuList = ({id, menu, listItemsData, isShowed}) => {
+
+  
   return (
     <div className={styles.menuCard} id={id} style={{"display": isShowed ? "block" : "none"}}>
         <h2 className={styles.typedOut}>{menu}</h2>

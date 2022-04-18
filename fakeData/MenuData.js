@@ -28,6 +28,14 @@ import event2 from "../public/img/event-2.avif";
 import event3 from "../public/img/event-3.avif";
 import event4 from "../public/img/event-4.avif";
 
+import main1 from "../public/img/main-1.avif"
+import main2 from "../public/img/main-2.avif"
+import main3 from "../public/img/main-3.avif"
+import main4 from "../public/img/main-4.avif"
+import main5 from "../public/img/main-5.avif"
+import main6 from "../public/img/main-6.avif"
+
+
 export const listProducts = [
     {
         id: uuidv4(),
@@ -200,6 +208,7 @@ export const listProducts = [
         extraInfo: "For 2-3 people",
         listAddIngredient: ["Pork slices", "Kimchi", "Vegetables", "Tofu", "Garlic"],
         size: [],
+        img: main1,
     },
     {
         id: uuidv4(),
@@ -210,6 +219,7 @@ export const listProducts = [
         extraInfo: "For 2 people",
         listAddIngredient: ["Shrip Cakes", "Rice Soup", "Dried Onion"],
         size: [],
+        img: main2,
     },
     {
         id: uuidv4(),
@@ -220,6 +230,7 @@ export const listProducts = [
         extraInfo: "For 2 people",
         listAddIngredient: ["Bao Bao", "Kimchi", "Banh mi"],
         size: [],
+        img: main3,
     },
     {
         id: uuidv4(),
@@ -230,6 +241,7 @@ export const listProducts = [
         extraInfo: "For 2-3 people",
         listAddIngredient: ["Wasabi", "Salad Seaweed", "Ginger", "Sushi Rice"],
         size: [],
+        img: main4,
     },
     {
         id: uuidv4(),
@@ -240,6 +252,7 @@ export const listProducts = [
         extraInfo: "For 2 people",
         listAddIngredient: ["Vegetables", "Chilli Powder"],
         size: [],
+        img: main5,
     },
     {
         id: uuidv4(),
@@ -250,6 +263,7 @@ export const listProducts = [
         extraInfo: "For 3-4 people",
         listAddIngredient: ["Pork Slices", "Salad", "Kimchi", "Beef Ribs"],
         size: [],
+        img: main6,
     },
     {
         id: uuidv4(),
