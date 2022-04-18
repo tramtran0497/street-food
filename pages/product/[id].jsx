@@ -7,7 +7,7 @@ import Head from "next/head";
 import { ChangeQty } from "../../Components/ChangeQty";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
-// import {listDrinks, listFoods} from "../../fakeData/MenuData.js";
+import {listProducts} from "../../fakeData/MenuData.js";
 
 const demoDrink = {
     id:"1D",
@@ -26,7 +26,8 @@ export default function Product () {
     const {id} = router.query;
 
     useEffect(() => {
-        // const product = listFoods?.find(item => item.id === id);
+        // const product = listProducts?.find(item => item.id === id);
+        console.log(listProducts)
     });
   return (
     <div className={styles.container}>

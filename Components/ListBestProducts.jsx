@@ -1,5 +1,5 @@
 import styles from "../styles/ListBestProducts.module.css";
-import {listFoods, listDrinks} from "../fakeData/MenuData.js";
+import {listProducts} from "../fakeData/MenuData.js";
 import { BestProduct } from "./BestProduct";
 
 export const ListBestProducts = () => {
@@ -16,12 +16,12 @@ export const ListBestProducts = () => {
         <div className={styles.listProducts}>
             <div className={styles.listFoods}>   
                 {
-                    listFoods.map(food =>  <BestProduct product={food}/>)
+                    listProducts.map(product => product.type === "Best Food Item" ? <BestProduct product={product}/> : "")
                 }
             </div>
             <div className={styles.listDrinks}>
                 {
-                    listDrinks.map(drink => <BestProduct product={drink} height="600px"/>)
+                    listProducts.map(product => product.type === "Best Drink Item" ? <BestProduct product={product} height="600px"/> : "")
                 }
             </div>
         </div>
