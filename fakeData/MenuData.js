@@ -18,12 +18,12 @@ import drink1 from "../public/img/drink-1.avif";
 import drink2 from "../public/img/drink-2.avif";
 import drink3 from "../public/img/drink-3.avif";
 import drink4 from "../public/img/drink-4.avif";
-import drink5 from "../public/img/drink-5.avif";
-import drink6 from "../public/img/drink-6.avif";
-import drink7 from "../public/img/drink-7.avif";
-import drink8 from "../public/img/drink-8.avif";
-import drink9 from "../public/img/drink-9.avif";
-import drink10 from "../public/img/drink-10.avif";
+import drinkM1 from "../public/img/drinkM-1.avif";
+import drinkM2 from "../public/img/drinkM-2.avif";
+import drinkM3 from "../public/img/drinkM-3.avif";
+import drinkM4 from "../public/img/drinkM-4.avif";
+import drinkM5 from "../public/img/drinkM-5.avif";
+import drinkM6 from "../public/img/drinkM-6.avif";
 
 
 import career1 from "../public/img/career-1.avif";
@@ -285,7 +285,7 @@ export const listProducts = [
         listAddIngredient: ['Bubble', 'Cheese Foam', 'Jelly', 'Flan', 'Pudding'],
         size: ["Small", "Medium", "Large"],
         price: [4.9, 5.8, 6.5],
-        img: drink5,
+        img: drinkM1,
     },
     {
         id: uuidv4(),
@@ -296,7 +296,7 @@ export const listProducts = [
         size: ["Small", "Medium", "Large"],
         extraInfo: "You can choose which one you love.",
         price: [4.9, 5.8, 6.5],
-        img: drink6,
+        img: drinkM2,
     },
     {
         id: uuidv4(),
@@ -307,7 +307,7 @@ export const listProducts = [
         size: ["Small", "Medium", "Large"],
         extraInfo: "You can choose which one you love.",
         price: [4.9, 5.8, 6.5],
-        img: drink7,
+        img: drinkM3,
     },
     {
         id: uuidv4(),
@@ -318,7 +318,7 @@ export const listProducts = [
         size: ["Small", "Medium", "Large"],
         extraInfo: "You can change level of sweet.",
         price: [4.9, 5.8, 6.5],
-        img: drink8,
+        img: drinkM4,
     },
     {
         id: uuidv4(),
@@ -329,7 +329,7 @@ export const listProducts = [
         listAddIngredient: [],
         size: [],
         price: [11.9],
-        img: drink9,
+        img: drinkM5,
     },
     {
         id: uuidv4(),
@@ -340,7 +340,7 @@ export const listProducts = [
         size: [],
         extraInfo: "Sake: 300ml",
         price: [14.9],
-        img: drink10,
+        img: drinkM6,
     },
     {
         id: uuidv4(),
