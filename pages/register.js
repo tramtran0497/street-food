@@ -23,11 +23,15 @@ export default function register(){
             <option value="complain">Social Media</option>
             <option value="support">Poster</option>
           </select>
-          <input type="radio" id="agree" name="agree" value="agree" />
-          <label for="agree">By creating an account, you confirm that agree to be bound by our Privacy Policy and Terms of Use</label>
-          <input type="radio" id="disagree" name="disagree" value="disagree" />
-          <label for="disagree">You would like to receive events from TeeTea through your contact</label>
-          <button className={styles.btn}>Send</button>
+          <div className={styles.radio}>
+            <input type="checkbox" id="agree" name="agree" value="agree" />
+            <label for="agree">By creating an account, you confirm that agree to be bound by our Privacy Policy and Terms of Use</label>
+          </div>
+          <div className={styles.radio}>
+            <input type="checkbox" id="disagree" name="disagree" value="disagree" />
+            <label for="disagree">You would like to receive events from TeeTea through your contact</label>
+          </div>
+          <button className={styles.btn}>Submit</button>
         </form>
       </div>
     </div>
