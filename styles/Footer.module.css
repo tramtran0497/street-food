@@ -56,10 +56,27 @@
     padding: 5px 10px;
     border-radius: 10px;
     transition: all .25s ease;
+    position: relative;
 }
 
 .listItem:hover{
     background-color: aquamarine;
+}
+
+.showPhoneNum{
+    width: 250px;
+    position: absolute;
+    top: 5px;
+    left: 110px;
+    text-decoration: underline;
+}
+
+.listItem.bookTable .showPhoneNum{
+    display: none;
+}
+
+.listItem.bookTable:hover .showPhoneNum{
+    display: block;
 }
 
 .right{
