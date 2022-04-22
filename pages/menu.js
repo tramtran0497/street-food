@@ -38,6 +38,7 @@ export default function menu() {
         <div className={styles.btnWrapper}>
             <button className={styles.btn}>ORDER PICKUP</button>
             <button className={styles.btn}>ORDER DELIVERY</button>
+            <button className={styles.btn}>GIFT FOR FRIENDS AND FAMILY</button>
         </div>
         <div className={styles.navBarMenu}>
             <ul className={styles.navList}>

@@ -1,6 +1,7 @@
 import { useState, useContext, useEffect } from "react";
 import Head from 'next/head';
 import styles from "../styles/LogIn.module.css";
+import Link from 'next/link';
 import { ThemeContext } from "../ReactHooks/ThemeContext";
 import { AuthenticationContext } from "../ReactHooks/AutheticationContext";
 import { IoCheckmarkCircleSharp, IoCreateOutline, IoGiftOutline, IoBagHandleOutline } from "react-icons/io5";
@@ -33,22 +34,30 @@ export default function login () {
                     <h3><IoCheckmarkCircleSharp className={styles.icon}/>  {success}</h3>
                     <div className={styles.offerList}>
                         <h4>OUR SERVICES</h4>
-                        <div className={styles.offerItem}>
-                            <IoCreateOutline className={styles.offerIcon}/>
-                            <p>Book a table</p>
-                        </div>
-                        <div className={styles.offerItem}>
-                            <IoGiftOutline className={styles.offerIcon}/>
-                            <p>Gifts for your friends and family</p>
-                        </div>
-                        <div className={styles.offerItem}>
-                            <IoBagHandleOutline className={styles.offerIcon}/>
-                            <p>Pick Up</p>
-                        </div>
-                        <div className={styles.offerItem}>
-                            <MdOutlineDeliveryDining className={styles.offerIcon}/>
-                            <p>Delivery</p>
-                        </div>
+                        <Link href="/bookTable">
+                            <div className={`${styles.offerItem} ${styles.bookTable}`}>
+                                <IoCreateOutline className={styles.offerIcon}/>
+                                <p>Book a table</p>
+                            </div>
+                        </Link>
+                        <Link href="/menu">
+                            <div className={styles.offerItem}>
+                                <IoGiftOutline className={styles.offerIcon}/>
+                                <p>Gifts for your friends and family</p>
+                            </div>
+                        </Link>
+                        <Link href="/menu">
+                            <div className={styles.offerItem}>
+                                <IoBagHandleOutline className={styles.offerIcon}/>
+                                <p>Pick Up</p>
+                            </div>
+                        </Link>
+                        <Link href="/menu">
+                            <div className={styles.offerItem}>
+                                <MdOutlineDeliveryDining className={styles.offerIcon}/>
+                                <p>Delivery</p>
+                            </div>
+                        </Link>
                     </div>
                 </div>
             ) : (

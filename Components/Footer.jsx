@@ -1,7 +1,7 @@
 import styles from "../styles/Footer.module.css"
 import {IoLogoLinkedin, IoLogoGithub, IoLogoWhatsapp, IoLogoFacebook} from "react-icons/io5"
 import { BiPhoneCall, BiNotepad, BiDonateHeart, BiCycling, BiMap} from "react-icons/bi";
-import Link from 'next/link'
+import Link from 'next/link';
 
 export const Footer = () => {
     return(
@@ -27,7 +27,7 @@ export const Footer = () => {
                         <li className={styles.listItem}>Career</li>
                     </Link>
                     <Link href="/event">
-                        <li className={styles.listItem}>Event</li>      
+                        <li className={styles.listItem}>Event & News</li>      
                     </Link>
                     <Link href="/">
                         <li className={styles.listItem}>Home</li>      
@@ -37,11 +37,17 @@ export const Footer = () => {
                     </Link>
                 </ul>
                 <ul className={styles.list}>
-                    <Link href="/event">
-                        <li className={styles.listItem}>News</li>       
-                    </Link>
                     <Link href="/deliveryPolicy">
                         <li className={styles.listItem}>Delivery Policy</li>       
+                    </Link>
+                    <Link href="/menu">
+                        <li className={styles.listItem}>Gifts</li>       
+                    </Link>
+                    <Link href="/menu">
+                        <li className={styles.listItem}>Delivery</li>       
+                    </Link>
+                    <Link href="/menu">
+                        <li className={styles.listItem}>Pick Up</li>       
                     </Link>
                     <li className={`${styles.listItem} ${styles.bookTable}`}>Book Table <span className={styles.showPhoneNum}>Calling (+358) 412 345 678</span></li>
                     <Link href="/cart">

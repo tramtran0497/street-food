@@ -57,6 +57,7 @@
     border-radius: 10px;
     transition: all .25s ease;
     position: relative;
+    text-align: start;
 }
 
 .listItem:hover{
