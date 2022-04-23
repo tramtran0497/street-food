@@ -26,7 +26,9 @@ export const NavBarUser = ({style}) => {
                     </div>
                     <div className={styles.nameAccount}>
                         <h2>Name Account</h2>
-                        <p>Edit your account details</p>
+                        <Link href="/profile">
+                            <p>Edit your profile</p>
+                        </Link>
                     </div>
                     
                 </div>
@@ -37,24 +39,31 @@ export const NavBarUser = ({style}) => {
                             <p>My order</p>
                         </div>
                     </Link>
-                    <div className={styles.navItem}>
-                        <IoGiftOutline className={styles.icon}/>
-                        <p>Discount and Gifts</p>
-                    </div>
-                    <Link href="/orders">
+                    <Link href="/profile">
                         <div className={styles.navItem}>
-                            <IoRestaurantOutline className={styles.icon}/>
-                            <p>My history orders</p>
+                            <IoGiftOutline className={styles.icon}/>
+                            <p>Discount and Gifts</p>
                         </div>
                     </Link>
-                    <div className={styles.navItem}>
-                        <IoSettingsOutline className={styles.icon}/>
-                        <p>Setting</p>
-                    </div>
-                    <div className={styles.navItem}>
-                        <IoHelpCircleOutline className={styles.icon}/>
-                        <p>Help</p>
-                    </div>
+                    <Link href="/profile">
+                        <div className={styles.navItem}>
+                            <IoRestaurantOutline className={styles.icon}/>
+                            <p>My recent orders</p>
+                        </div>
+                    </Link>
+                    <Link href="/profile">
+                        <div className={styles.navItem}>
+                            <IoSettingsOutline className={styles.icon}/>
+                            <p>Setting</p>
+                        </div>
+                    </Link>
+                    <Link href="/help">
+                        <div className={styles.navItem}>
+                            <IoHelpCircleOutline className={styles.icon}/>
+                            <p>Help</p>
+                        </div>
+                    </Link>
+                   
                 </div>
                 <div className={styles.bottom} onClick={handleLogOut}>
                     <IoLogOutOutline className={styles.icon}/>
