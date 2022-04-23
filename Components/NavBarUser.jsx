@@ -80,14 +80,18 @@ export const NavBarUser = ({style}) => {
                         <p>Log In</p>
                     </div>
                 </Link>
-                <div className={styles.navItem}>
-                    <IoPersonAddOutline className={styles.icon}/>
-                    <p>Register</p>
-                </div>
-                <div className={styles.navItem}>
-                    <IoHelpCircleOutline className={styles.icon}/>
-                    <p>Help</p>
-                </div>
+                <Link href="/register">
+                    <div className={styles.navItem}>
+                        <IoPersonAddOutline className={styles.icon}/>
+                        <p>Register</p>
+                    </div>
+                </Link>
+                <Link href="/help">
+                    <div className={styles.navItem}>
+                        <IoHelpCircleOutline className={styles.icon}/>
+                        <p>Help</p>
+                    </div>
+                </Link>
             </div>
         )
     };
